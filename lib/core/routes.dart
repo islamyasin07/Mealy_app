@@ -1,12 +1,44 @@
 import 'package:flutter/material.dart';
+import '../view/screens/explore/explore_screen.dart';
+import '../view/screens/details/meal_details_screen.dart';
+import '../view/screens/favorites/favorites_screen.dart';
+import '../view/screens/settings/settings_screen.dart';
 
-class FadeRoute extends PageRouteBuilder {
-  final Widget page;
-  FadeRoute({required this.page})
-      : super(
-          pageBuilder: (_, __, ___) => page,
-          transitionsBuilder: (_, animation, __, child) {
-            return FadeTransition(opacity: animation, child: child);
-          },
+
+class AppRoutes {
+
+  static const String explore = '/';
+  static const String mealDetails = '/meal-details';
+  static const String favorites = '/favorites';
+  static const String settings = '/settings';
+  static const String login = '/login'; 
+  static const String tasks = '/tasks'; 
+  static const String admin = '/admin'; 
+
+ 
+ /* static Route<dynamic> generateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case explore:
+        return MaterialPageRoute(builder: (_) => const ExploreScreen());
+      case mealDetails:
+        return MaterialPageRoute(builder: (_) => const MealDetailsScreen());
+      case favorites:
+        return MaterialPageRoute(builder: (_) => const FavoritesScreen());
+      case settings:
+        return MaterialPageRoute(builder: (_) => const SettingsScreen());
+      // لاحقاً تضيف الباقي:
+      // case login: return MaterialPageRoute(builder: (_) => const LoginScreen());
+      // case tasks: return MaterialPageRoute(builder: (_) => const TasksScreen());
+      // case admin: return MaterialPageRoute(builder: (_) => const AdminScreen());
+
+      default:
+        return MaterialPageRoute(
+          builder: (_) => Scaffold(
+            body: Center(
+              child: Text('404 - Page Not Found'),
+            ),
+          ),
         );
+    }
+  } */
 }
