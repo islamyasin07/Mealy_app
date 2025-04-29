@@ -18,7 +18,9 @@ class AppColors {
 
   // States
   static const Color success = Color(0xFF66BB6A);     //Success 
-  static const Color error = Color(0xFFE53935);       //Error 
+  static const Color error = Color(0xFFE53935);
+
+     
 }
 
 //Y'all can use it inside the application without any troubles 
